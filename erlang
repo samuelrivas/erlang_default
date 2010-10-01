@@ -1,0 +1,2 @@
+code:add_path("/home/samuel/.erlang_default/ebin").
+code:ensure_loaded(user_default).

@@ -1,0 +1,8 @@
+INSTALL
+-------
+
+Deploy this code in $HOME/.erlang_default and do
+
+   cd $HOME/.erlang_default/src
+   erl -make
+   ln -s $HOME/.erlang_default/erlang $HOME/.erlang
