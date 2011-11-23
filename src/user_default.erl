@@ -7,7 +7,7 @@ make() ->
 	make([]).
 
 make(Options) ->
-	make:all([load | Options]).
+	make:all([load, debug_info | Options]).
 
 make_dir(Dir) ->
     make_dir(Dir, []).
