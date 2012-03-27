@@ -1,2 +1,4 @@
 code:add_path("/home/samuel/.erlang_default/ebin").
+code:add_path("/home/samuel/local/src/distel/ebin").
+code:add_path("/home/samuel/local/lib/erlang/lib/wrangler-1.0/ebin").
 code:ensure_loaded(user_default).
