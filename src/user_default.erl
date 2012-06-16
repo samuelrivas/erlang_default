@@ -20,6 +20,13 @@ make_dir(Dir, Options) ->
         file:set_cwd(Old)
     end.
 
+%% NOTE: This is cheating, those types are defined as opaque by their developers
+samp(X) ->
+    case X of
+        {eqc_gen, _} -> eqc_gen:sample(X);
+        {'$type', _} -> proper_gen:sample(X)
+    end.
+
 pp(Term) ->
     io:format("~w~n", [Term]).
 
