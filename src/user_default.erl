@@ -1,6 +1,7 @@
 -module(user_default).
 
--export([make/0, make/1, make_dir/1, make_dir/2, samp/1, pp/1, catch_all/1]).
+-export([make/0, make/1, make_dir/1, make_dir/2, samp/1, pp/1, pps/1,
+         catch_all/1]).
 
 make() ->
     make([]).
@@ -29,6 +30,9 @@ samp(X) ->
 
 pp(Term) ->
     io:format("~w~n", [Term]).
+
+pps(Term) ->
+    io:format("~p~n", [Term]).
 
 catch_all(Fun) ->
     try Fun()
