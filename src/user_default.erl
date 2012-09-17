@@ -7,7 +7,9 @@ make() ->
     make([]).
 
 make(Options) ->
-    make:all([load, debug_info | Options]).
+    make:all(
+      [load, debug_info | Options]
+      ++ [{i, "../include"}, {outdir, "../ebin"}]).
 
 make_dir(Dir) ->
     make_dir(Dir, []).
