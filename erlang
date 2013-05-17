@@ -1,2 +1,9 @@
 code:add_path("/home/samuel/.erlang_default/ebin").
 code:ensure_loaded(user_default).
+
+case os:getenv("ERLANG_LOAD_PATH") of
+    false ->
+        ok;
+    Paths ->
+        lists:foreach(fun(P) -> code:add_path(P) end, string:tokens(Paths, ":"))
+end.
